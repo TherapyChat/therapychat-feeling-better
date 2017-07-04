@@ -10,18 +10,7 @@
   <template>
     <script src="../webcomponentsjs/webcomponents-lite.js"></script>
     <link rel="import" href="therapychat-felling-better.html">
-    <link rel="import" href="../iron-icons/iron-icons.html">
-    <style>
-      therapychat-felling-better {
-        max-width: 400px;
-        margin: auto;
-      }
-      iron-icon, div[suffix] {
-        color: hsl(0, 0%, 50%);
-        margin-right: 12px;
-      }
-    </style>
-    <next-code-block></next-code-block>
+    <therapychat-felling-better></therapychat-felling-better>
   </template>
 </custom-element-demo>
 ```
