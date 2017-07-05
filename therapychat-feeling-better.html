@@ -17,7 +17,7 @@
         color: white;
       }
 
-      .top-title, .bottom-title {
+      .title {
         margin: .20em 0;
         font-size: 2.38em;
         font-weight: 500;
@@ -60,7 +60,7 @@
           text-align: left;
         }
 
-        .top-title, .bottom-title {
+        .title {
           font-size: 1.7em;
         }
 
@@ -79,9 +79,14 @@
     </style>
 
     <div>
-      <h1 class="top-title">[[topTitle]]</h1>
-      <h2 class="bottom-title">[[bottomTitle]]</h2>
-      <div class="subtitle">[[subtitle]]</div>
+      <h1
+        class="title"
+        inner-h-t-m-l="[[title]]"
+      ></h1>
+      <div
+        class="subtitle"
+        inner-h-t-m-l="[[subtitletitle]]"
+      >[[subtitle]]</div>
       <a
         href="[[buttonHref]]"
         target="[[buttonTarget]]"
@@ -97,10 +102,6 @@
       is: 'therapychat-feeling-better',
 
       properties: {
-        bottomTitle: {
-          type: String,
-          value: 'empieza a sentirte mejor'
-        },
         button: {
           type: String,
           value: 'Hablar ahora'
@@ -121,9 +122,9 @@
           type: String,
           value: 'Pregunta a nuestro psicólogo sin compromiso'
         },
-        topTitle: {
+        title: {
           type: String,
-          value: 'TherapyChat'
+          value: 'TherapyChat<br>empieza a sentirte mejor'
         }
       }
 
