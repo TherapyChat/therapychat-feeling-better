@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+    <title>therapychat-felling-better test</title>
+
+    <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+    <script src="../../web-component-tester/browser.js"></script>
+
+    <link rel="import" href="../therapychat-felling-better.html">
+  </head>
+  <body>
+
+    <test-fixture id="basic">
+      <template>
+        <therapychat-felling-better></therapychat-felling-better>
+      </template>
+    </test-fixture>
+
+    <test-fixture id="customProperties">
+      <template>
+        <therapychat-felling-better
+          bottom-title="bottomTitle"
+          button="button"
+          button-href="buttonHref"
+          button-target="buttonTarget"
+          button-title="buttonTitle"
+          subtitle="subtitle"
+          top-title="topTitle"
+        ></therapychat-felling-better>
+      </template>
+    </test-fixture>
+
+    <script>
+      suite('therapychat-felling-better', function () {
+
+        test('instantiating the element works', function () {
+          var element = fixture('basic')
+          assert.equal(element.is, 'therapychat-felling-better')
+        })
+
+        test('deafult properties', function () {
+          var element = fixture('basic')
+          assert.equal(element.bottomTitle, 'empieza a sentirte mejor')
+          assert.equal(element.button, 'Hablar ahora')
+          assert.equal(element.buttonHref, 'https://app.therapychat.com/signup')
+          assert.equal(element.buttonTarget, '')
+          assert.equal(element.buttonTitle, 'Hablar ahora')
+          assert.equal(element.subtitle, 'Pregunta a nuestro psicólogo sin compromiso')
+          assert.equal(element.topTitle, 'TherapyChat')
+        })
+
+        test('custom properties', function () {
+          var element = fixture('customProperties')
+          assert.equal(element.bottomTitle, 'bottomTitle')
+          assert.equal(element.button, 'button')
+          assert.equal(element.buttonHref, 'buttonHref')
+          assert.equal(element.buttonTarget, 'buttonTarget')
+          assert.equal(element.buttonTitle, 'buttonTitle')
+          assert.equal(element.subtitle, 'subtitle')
+          assert.equal(element.topTitle, 'topTitle')
+        })
+
+      })
+    </script>
+  </body>
+</html>
