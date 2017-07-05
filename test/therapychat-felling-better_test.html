@@ -4,24 +4,24 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
 
-    <title>therapychat-felling-better test</title>
+    <title>therapychat-feeling-better test</title>
 
     <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
     <script src="../../web-component-tester/browser.js"></script>
 
-    <link rel="import" href="../therapychat-felling-better.html">
+    <link rel="import" href="../therapychat-feeling-better.html">
   </head>
   <body>
 
     <test-fixture id="basic">
       <template>
-        <therapychat-felling-better></therapychat-felling-better>
+        <therapychat-feeling-better></therapychat-feeling-better>
       </template>
     </test-fixture>
 
     <test-fixture id="customProperties">
       <template>
-        <therapychat-felling-better
+        <therapychat-feeling-better
           bottom-title="bottomTitle"
           button="button"
           button-href="buttonHref"
@@ -29,16 +29,16 @@
           button-title="buttonTitle"
           subtitle="subtitle"
           top-title="topTitle"
-        ></therapychat-felling-better>
+        ></therapychat-feeling-better>
       </template>
     </test-fixture>
 
     <script>
-      suite('therapychat-felling-better', function () {
+      suite('therapychat-feeling-better', function () {
 
         test('instantiating the element works', function () {
           var element = fixture('basic')
-          assert.equal(element.is, 'therapychat-felling-better')
+          assert.equal(element.is, 'therapychat-feeling-better')
         })
 
         test('deafult properties', function () {
