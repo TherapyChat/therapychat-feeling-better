@@ -6,7 +6,7 @@
     <style>
       :host {
         display: block;
-        padding: 80px 10px;
+        padding: 5em .625em;
         background-image: linear-gradient(108deg, #89dbdb, #9cc9e8);
         font-size: 1rem;
       }
@@ -18,32 +18,29 @@
       }
 
       .top-title, .bottom-title {
-        margin: 10px 0;
+        margin: .20em 0;
         font-size: 2.38em;
         font-weight: 500;
-        line-height: 1.21;
-        letter-spacing: .1px;
+        line-height: 1.21em;
       }
 
       .subtitle {
-        margin: 25px 0;
-        font-size: 15px;
+        margin: 1.56em 0;
+        font-size: 1em;
         font-weight: 200;
-        line-height: 1.67;
       }
 
       a {
         display: inline-block;
-        padding: 17px 0;
-        width: 265px;
-        border-radius: 4px;
+        padding: .70em 0;
+        width: 13.25em;
+        border-radius: .2em;
         background-image: linear-gradient(90deg, #78b6e6, #584bc9 50%);
         background-size: 200%;
         background-position: 0%;
         transition: background .2s ease-in-out;
-        font-size: 20px;
+        font-size: 1.25em;
         font-weight: 300;
-        line-height: 1.5;
         text-decoration: none;
         color: white;
       }
@@ -55,7 +52,7 @@
       @media (max-width: 510px) {
 
         :host {
-          padding: 26px 28px;
+          padding: 1.625em 1.1875em;
           background-image: linear-gradient(126deg, #89dbdb, #9cc9e8);
         }
 
@@ -64,7 +61,7 @@
         }
 
         .top-title, .bottom-title {
-          font-size: 27px;
+          font-size: 1.7em;
         }
 
         .subtitle {
@@ -72,10 +69,10 @@
         }
 
         a {
-          margin-top: 15px;
-          padding: 7px 23px;
+          margin-top: .85em;
+          padding: .365em 1.3em;
           width: auto;
-          font-size: 18px;
+          font-size: 1.125em;
         }
 
       }
@@ -86,9 +83,9 @@
       <h2 class="bottom-title">[[bottomTitle]]</h2>
       <div class="subtitle">[[subtitle]]</div>
       <a
-        href$="[[buttonHref]]"
-        target$="[[buttonTarget]]"
-        title$="[[buttonTitle]]"
+        href="[[buttonHref]]"
+        target="[[buttonTarget]]"
+        title="[[buttonTitle]]"
       >[[button]]</a>
     </div>
 
