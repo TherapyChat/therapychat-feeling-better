@@ -1,3 +1,5 @@
+[![Build status](https://travis-ci.org/TherapyChat/therapychat-feeling-better.svg?branch=master)](https://travis-ci.org/TherapyChat/therapychat-feeling-better)
+
 # &lt;therapychat-feeling-better&gt;
 
 `<therapychat-feeling-better>` is call to action component composed by title, subtitle and button.
