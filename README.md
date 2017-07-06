@@ -31,6 +31,18 @@
   subtitle="Pregunta a nuestro psicólogo sin compromiso"
   top-title="TherapyChat"
 ></therapychat-feeling-better>
+
+<!-- open in new window -->
+
+<therapychat-feeling-better
+  button-target="_blank"
+></therapychat-feeling-better>
+
+<!-- show separator between title and subtitle -->
+
+<therapychat-feeling-better
+  separator
+></therapychat-feeling-better>
 ```
 
 ## Installation
@@ -38,13 +50,6 @@
 ```bash
 bower install -save therapychat-feeling-better
 ```
-
-## Usage
-
-* All properties are optional
-* `button-target` property:
-  * Open in new tab: `_blank`
-  * Open in same tab: `""` (empty)
 
 ## License
 
