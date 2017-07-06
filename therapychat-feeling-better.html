@@ -91,7 +91,7 @@
         href$="[[buttonHref]]"
         target$="[[buttonTarget]]"
         title$="[[buttonTitle]]"
-      >[[button]]</a>
+      >[[buttonText]]</a>
     </div>
 
   </template>
@@ -102,10 +102,6 @@
       is: 'therapychat-feeling-better',
 
       properties: {
-        button: {
-          type: String,
-          value: 'Hablar ahora'
-        },
         buttonHref: {
           type: String,
           value: 'https://app.therapychat.com/signup'
@@ -113,6 +109,10 @@
         buttonTarget: {
           type: String,
           value: ''
+        },
+        buttonText: {
+          type: String,
+          value: 'Hablar ahora'
         },
         buttonTitle: {
           type: String,

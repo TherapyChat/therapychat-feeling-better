@@ -22,9 +22,9 @@
     <test-fixture id="customProperties">
       <template>
         <therapychat-feeling-better
-          button="button"
           button-href="buttonHref"
           button-target="buttonTarget"
+          button-text="button"
           button-title="buttonTitle"
           subtitle="subtitle"
           title="title"
@@ -42,9 +42,9 @@
 
         test('deafult properties', function () {
           var element = fixture('basic')
-          assert.equal(element.button, 'Hablar ahora')
           assert.equal(element.buttonHref, 'https://app.therapychat.com/signup')
           assert.equal(element.buttonTarget, '')
+          assert.equal(element.buttonText, 'Hablar ahora')
           assert.equal(element.buttonTitle, 'Hablar ahora')
           assert.equal(element.subtitle, 'Pregunta a nuestro psicólogo sin compromiso')
           assert.equal(element.title, 'TherapyChat<br>empieza a sentirte mejor')
@@ -52,9 +52,9 @@
 
         test('custom properties', function () {
           var element = fixture('customProperties')
-          assert.equal(element.button, 'button')
           assert.equal(element.buttonHref, 'buttonHref')
           assert.equal(element.buttonTarget, 'buttonTarget')
+          assert.equal(element.buttonText, 'button')
           assert.equal(element.buttonTitle, 'buttonTitle')
           assert.equal(element.subtitle, 'subtitle')
           assert.equal(element.title, 'title')

@@ -19,9 +19,11 @@
 <therapychat-feeling-better></therapychat-feeling-better>
 
 <therapychat-feeling-better
-  title="TherapyChat empieza a sentirte mejor"
+  button-href="https://app.therapychat.com/signup"
+  button-target="_blank"
+  button-text="Hablar ahora"
+  button-title="Hablar ahora"
+  title="TherapyChat<br>empieza a sentirte mejor"
   subtitle="Pregunta a nuestro psicólogo sin compromiso"
-  button="Hablar ahora"
-  button-link="https://app.therapychat.com/signup"
 ></therapychat-feeling-better>
 ```
