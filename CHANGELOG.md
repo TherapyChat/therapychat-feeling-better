@@ -7,7 +7,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [0.0.5]
 
 ### Changed
-- topTitle and bottomTitle properties replaced by title
 - button property replaced by buttonText
 
 ## [0.0.1]

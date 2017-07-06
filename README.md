@@ -18,12 +18,22 @@
 ```html
 <therapychat-feeling-better></therapychat-feeling-better>
 
+<!-- default properties -->
+
 <therapychat-feeling-better
+  bottom-title="empieza a sentirte mejor"
   button-href="https://app.therapychat.com/signup"
-  button-target="_blank"
+  button-target=""
   button-text="Hablar ahora"
   button-title="Hablar ahora"
-  title="TherapyChat<br>empieza a sentirte mejor"
   subtitle="Pregunta a nuestro psicólogo sin compromiso"
+  top-title="TherapyChat"
 ></therapychat-feeling-better>
 ```
+
+## Usage
+
+* All properties are optional
+* `button-target` property:
+  * Open in new tab: `_blank`
+  * Open in same tab: `""` (empty)
