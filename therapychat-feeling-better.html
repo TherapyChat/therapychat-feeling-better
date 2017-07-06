@@ -24,7 +24,7 @@
         line-height: 1.21em;
       }
 
-      .bottom-title.separator:after {
+      .separator:after {
         content: '';
         display: block;
         margin: .6em auto;
@@ -71,7 +71,7 @@
           text-align: left;
         }
 
-        .bottom-title.separator:after {
+        .separator:after {
           display: none;
         }
 
@@ -96,7 +96,7 @@
     <div>
 
       <template is="dom-if" if="[[topTitle]]">
-        <h1 class="top-title">[[topTitle]]</h1>
+        <h1 class$="[[_computedTopTitleClass(separator, bottomTitle)]]">[[topTitle]]</h1>
       </template>
 
       <template is="dom-if" if="[[bottomTitle]]">
@@ -157,6 +157,10 @@
           type: String,
           value: 'TherapyChat'
         }
+      },
+
+      _computedTopTitleClass: function (separator, bottomTitle) {
+        return 'top-title ' + (separator && !bottomTitle ? 'separator' : '')
       },
 
       _computedBottomTitleClass: function (separator) {
