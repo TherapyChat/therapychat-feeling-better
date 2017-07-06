@@ -52,4 +52,4 @@ therapychat-feeling-better is available under the `Apache License 2.0`. See the 
 
 ## Changelog
 
-See [CHANGELOG](./CHANGELOG) file.
+See [CHANGELOG](./CHANGELOG.md) file.
