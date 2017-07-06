@@ -33,9 +33,23 @@
 ></therapychat-feeling-better>
 ```
 
+## Installation
+
+```bash
+bower install -save therapychat-feeling-better
+```
+
 ## Usage
 
 * All properties are optional
 * `button-target` property:
   * Open in new tab: `_blank`
   * Open in same tab: `""` (empty)
+
+## License
+
+therapychat-feeling-better is available under the `Apache License 2.0`. See the [LICENSE](./LICENSE) file for more info.
+
+## Changelog
+
+See [CHANGELOG](./CHANGELOG) file.
