@@ -6,7 +6,7 @@
     <style>
       :host {
         display: block;
-        padding: 4.5em .625em;
+        padding: 3.6em .625em;
         background-image: linear-gradient(108deg, #89dbdb, #9cc9e8);
         font-size: 1rem;
       }
@@ -24,8 +24,18 @@
         line-height: 1.21em;
       }
 
+      .bottom-title.separator:after {
+        content: '';
+        display: block;
+        margin: .6em auto;
+        height: 1px;
+        width: 1.3em;
+        background: white;
+      }
+
       .subtitle {
-        margin: 1.56em 0 2em;
+        margin: 1.56em auto 2em auto;
+        max-width: 40.625em;
         font-size: 1em;
         font-weight: 200;
       }
@@ -61,6 +71,10 @@
           text-align: left;
         }
 
+        .bottom-title.separator:after {
+          display: none;
+        }
+
         .top-title, .bottom-title {
           font-size: 1.7em;
         }
@@ -80,14 +94,27 @@
     </style>
 
     <div>
-      <h1 class="top-title">[[topTitle]]</h1>
-      <h2 class="bottom-title">[[bottomTitle]]</h2>
-      <p class="subtitle">[[subtitle]]</p>
-      <a
-        href$="[[buttonHref]]"
-        target$="[[buttonTarget]]"
-        title$="[[buttonTitle]]"
-      >[[buttonText]]</a>
+
+      <template is="dom-if" if="[[topTitle]]">
+        <h1 class="top-title">[[topTitle]]</h1>
+      </template>
+
+      <template is="dom-if" if="[[bottomTitle]]">
+        <h2 class$="[[_computedBottomTitleClass(separator)]]">[[bottomTitle]]</h2>
+      </template>
+
+      <template is="dom-if" if="[[subtitle]]">
+        <p class="subtitle">[[subtitle]]</p>
+      </template>
+
+      <template is="dom-if" if="[[buttonText]]">
+        <a
+          href$="[[buttonHref]]"
+          target$="[[buttonTarget]]"
+          title$="[[_computedButtonTitle(buttonTitle, buttonText)]]"
+        >[[buttonText]]</a>
+      </template>
+
     </div>
 
   </template>
@@ -116,7 +143,11 @@
         },
         buttonTitle: {
           type: String,
-          value: 'Hablar ahora'
+          value: ''
+        },
+        separator: {
+          type: Boolean,
+          value: false
         },
         subtitle: {
           type: String,
@@ -126,6 +157,14 @@
           type: String,
           value: 'TherapyChat'
         }
+      },
+
+      _computedBottomTitleClass: function (separator) {
+        return 'bottom-title ' + (separator ? 'separator' : '')
+      },
+
+      _computedButtonTitle: function (buttonTitle, buttonText) {
+        return buttonTitle || buttonText
       }
 
     })
