@@ -17,14 +17,14 @@
         color: white;
       }
 
-      .top-title, .bottom-title {
+      .tfb-top-title, .tfb-bottom-title {
         margin: .20em 0;
         font-size: 2.38em;
         font-weight: 500;
         line-height: 1.21em;
       }
 
-      .separator:after {
+      .tfb-separator:after {
         content: '';
         display: block;
         margin: .6em auto;
@@ -33,14 +33,14 @@
         background: white;
       }
 
-      .subtitle {
+      .tfb-subtitle {
         margin: 1.56em auto 2em auto;
         max-width: 40.625em;
         font-size: 1em;
         font-weight: 200;
       }
 
-      a {
+      .tfb-button {
         display: inline-block;
         padding: .70em 0;
         width: 13.25em;
@@ -55,7 +55,7 @@
         color: white;
       }
 
-      a:focus, a:hover {
+      .tfb-button:focus, .tfb-button:hover {
         background-position: 100%;
         color: white;
       }
@@ -71,19 +71,19 @@
           text-align: left;
         }
 
-        .separator:after {
+        .tfb-separator:after {
           display: none;
         }
 
-        .top-title, .bottom-title {
+        .tfb-top-title, .tfb-bottom-title {
           font-size: 1.7em;
         }
 
-        .subtitle {
+        .tfb-subtitle {
           display: none;
         }
 
-        a {
+        .tfb-button {
           margin-top: .85em;
           padding: .365em 1.3em;
           width: auto;
@@ -104,11 +104,12 @@
       </template>
 
       <template is="dom-if" if="[[subtitle]]">
-        <p class="subtitle">[[subtitle]]</p>
+        <p class="tfb-subtitle">[[subtitle]]</p>
       </template>
 
       <template is="dom-if" if="[[buttonText]]">
         <a
+          class="tfb-button"
           href$="[[buttonHref]]"
           target$="[[buttonTarget]]"
           title$="[[_computedButtonTitle(buttonTitle, buttonText)]]"
@@ -160,11 +161,11 @@
       },
 
       _computedTopTitleClass: function (separator, bottomTitle) {
-        return 'top-title ' + (separator && !bottomTitle ? 'separator' : '')
+        return 'tfb-top-title ' + (separator && !bottomTitle ? 'tfb-separator' : '')
       },
 
       _computedBottomTitleClass: function (separator) {
-        return 'bottom-title ' + (separator ? 'separator' : '')
+        return 'tfb-bottom-title ' + (separator ? 'tfb-separator' : '')
       },
 
       _computedButtonTitle: function (buttonTitle, buttonText) {
