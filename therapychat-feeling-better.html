@@ -1,36 +1,63 @@
 <link rel="import" href="../polymer/polymer.html">
+<!--
+`therapychat-feeling-better`
 
+Example:
+```html
+<therapychat-feeling-better
+  bottom-title="empieza a sentirte mejor"
+  button-href="https://app.therapychat.com/signup"
+  button-target=""
+  button-text="Hablar ahora"
+  button-title="Hablar ahora"
+  subtitle="Pregunta a nuestro psicólogo sin compromiso"
+  top-title="TherapyChat"
+></therapychat-feeling-better>
+```
+
+### Styling
+
+The following custom properties and mixins are available for styling:
+
+Custom property | Description | Default
+----------------|-------------|----------
+`--therapychat-feeling-better` | Mixin applied to the component | `{}`
+`--therapychat-feeling-better-mq-510-down` | Mixin applied to the component when `max-width: 510px` | `{}`
+`--therapychat-feeling-better-button` | Mixin applied to the button | `{}`
+`--therapychat-feeling-better-button-focus` | Mixin applied to the button whenf ocused | `{}`
+
+-->
 <dom-module id="therapychat-feeling-better">
   <template>
 
     <style>
       :host {
         display: block;
+        text-align: center;
+        font-family: "Circular", "Roboto", sans-serif;
         padding: 3.6em .625em;
         background-image: linear-gradient(108deg, #89dbdb, #9cc9e8);
         font-size: 1rem;
+        color: #ffffff;
+
+        @apply(--therapychat-feeling-better);
       }
 
-      * {
-        text-align: center;
-        font-family: "Circular", "Roboto", sans-serif;
-        color: white;
-      }
-
-      .tfb-top-title, .tfb-bottom-title {
+      .tfb-top-title,
+      .tfb-bottom-title {
         margin: .20em 0;
         font-size: 2.38em;
         font-weight: 500;
         line-height: 1.21em;
       }
 
-      .tfb-separator:after {
+      .tfb-separator::after {
         content: '';
         display: block;
         margin: .6em auto;
         height: 1px;
         width: 1.3em;
-        background: white;
+        background: currentColor;
       }
 
       .tfb-subtitle {
@@ -48,16 +75,19 @@
         background-image: linear-gradient(90deg, #78b6e6, #584bc9 50%);
         background-size: 200%;
         background-position: 0%;
-        transition: background .2s ease-in-out;
+        transition: background-position .2s ease-in-out;
         font-size: 1.25em;
         font-weight: 300;
         text-decoration: none;
-        color: white;
+
+        @apply(--therapychat-feeling-better-button);
       }
 
-      .tfb-button:focus, .tfb-button:hover {
+      .tfb-button:focus,
+      .tfb-button:hover {
         background-position: 100%;
-        color: white;
+
+        @apply(--therapychat-feeling-better-button-focus);
       }
 
       @media (max-width: 510px) {
@@ -65,10 +95,9 @@
         :host {
           padding: 1.625em 1.1875em;
           background-image: linear-gradient(126deg, #89dbdb, #9cc9e8);
-        }
-
-        * {
           text-align: left;
+
+          @apply(--therapychat-feeling-better-mq-510-down);
         }
 
         .tfb-separator:after {

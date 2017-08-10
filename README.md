@@ -2,7 +2,7 @@
 
 # &lt;therapychat-feeling-better&gt;
 
-`<therapychat-feeling-better>` is call to action component composed by title, subtitle and button.
+`<therapychat-feeling-better>` is a call to action component composed by title, subtitle and button.
 
 ![Sample](sample.png)
 
