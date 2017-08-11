@@ -23,6 +23,7 @@ Custom property | Description | Default
 ----------------|-------------|----------
 `--therapychat-feeling-better` | Mixin applied to the component | `{}`
 `--therapychat-feeling-better-mq-510-down` | Mixin applied to the component when `max-width: 510px` | `{}`
+`--therapychat-feeling-better-title` | Mixin applied to the title | `{}`
 `--therapychat-feeling-better-button` | Mixin applied to the button | `{}`
 `--therapychat-feeling-better-button-focus` | Mixin applied to the button whenf ocused | `{}`
 
@@ -49,6 +50,8 @@ Custom property | Description | Default
         font-size: 2.38em;
         font-weight: 500;
         line-height: 1.21em;
+
+        @apply(--therapychat-feeling-better-title);
       }
 
       .tfb-separator::after {
